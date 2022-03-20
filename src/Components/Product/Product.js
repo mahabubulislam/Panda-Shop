@@ -6,9 +6,9 @@ const Product = (props) => {
     const { title, image, price } = props.product;
     const {setCount} = props.setCount
     return (
-        <div className="col-md-4 g-3">
+        <div className="col-md-4 g-3" data-aos="zoom-in-up">
             <div className="card border-0 shadow-lg h-100 rounded-2">
-                <img src={image} alt="" className="card-img-top w-75 mx-auto" />
+                <img src={image} alt="" className="mt-3 w-75 mx-auto" />
                 <div className="card-body">
                     <h5 className="card-title">{title.slice(0, 20)}</h5>
                     <h4 className="card-text">Price: ${price}</h4>

@@ -14,16 +14,16 @@ const ReactModal = (props) => {
             </Button>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Category: {category}</Modal.Title>
+                    <Modal.Title>Category: {category.toUpperCase()}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <h3>{title}</h3>
                     <img className='w-50' src={image} alt="" />
-                    <p>{description}</p>
+                    <p className='text-capitalize'>{description}</p>
                     <div className="d-flex justify-content-between">
-                    <p>Price: ${price}</p>
-                    <p>Rating: {rating.rate}</p>
-                    <p>Total Sells: {rating.count}</p>
+                    <p className='fw-bold'>Price: ${price}</p>
+                    <p className='fw-bold'>Rating: {rating.rate}</p>
+                    <p className='fw-bold'>Total Sells: {rating.count}</p>
                     </div>
                 </Modal.Body>
             </Modal>
