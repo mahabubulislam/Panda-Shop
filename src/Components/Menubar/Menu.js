@@ -1,16 +1,22 @@
 import React from 'react';
-import './Menu.css'
+import { Navbar, Container, Nav } from 'react-bootstrap';
 const Menu = (props) => {
     return (
-        <div className='container d-flex justify-content-between bg-light'>
-            <h4 className='m-3 p-2'>Panda Shop</h4>
-            <nav className='m-3 p-2 d-flex'>
-                <li><a href="Home.js">Home</a></li>
-                <li><a href="https">Products</a></li>
-                <li><a href="https">Cart <sup>{props.count}</sup></a></li>
-                <li><a href="https">Login</a></li>
-            </nav>
-        </div>
+        <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#home">Products</Nav.Link>
+              <Nav.Link href="#link">Cart <sup>{props.count}</sup></Nav.Link>
+              <Nav.Link href="#link">Login</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+        
     );
 };
 

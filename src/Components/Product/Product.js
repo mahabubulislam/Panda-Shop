@@ -1,8 +1,9 @@
+
 import React from 'react';
+import ReactModal from '../ReactModal/ReactModal';
 
 const Product = (props) => {
     const { title, image, price } = props.product;
-    console.log(props.setCount)
     const {setCount} = props.setCount
     return (
         <div className="col-md-4 g-3">
@@ -14,6 +15,7 @@ const Product = (props) => {
                 </div>
                 <div className="d-flex justify-content-between">
                     <button className="btn btn-warning w-50">Buy now</button>
+                    <ReactModal detail={props}></ReactModal>
                     <button className="btn btn-success w-50" onClick={setCount} >Add to Cart</button>
                 </div>
             </div>

@@ -10,7 +10,7 @@ function App() {
   const [count,setCount]=useState(0)
   const displayCount = () => setCount(count+1)
   return (
-    <div className="App">
+    <div className="App container">
       <Menu count={count}></Menu>
       <Search></Search>
       <Products setCount={displayCount} ></Products>
