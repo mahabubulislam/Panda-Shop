@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Search = () => {
+    const [product, setProduct] = useState([])
     return (
         <div>
             <h3 className='text-info my-3 text-center'>3 days guaranteed delivary all overs country </h3>
