@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
-const Products = () => {
+const Products = (props) => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
@@ -8,14 +8,11 @@ const Products = () => {
             .then(data => setProducts(data))
     }, [])
     return (
-
         <div className='container'>
             <div className="row">
-                
-                    {
-                        products.map(product => <Product product={product} key={product.id}></Product>)
-                    }
-                
+                {
+                    products.map(product => <Product setCount={props} product={product} key={product.id}></Product>)
+                }
             </div>
         </div>
     );

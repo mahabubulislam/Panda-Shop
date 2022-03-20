@@ -4,13 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './Components/Menubar/Menu';
 import Search from './Components/Search/Search';
 import Products from './Components/Products/Products';
+import { useState } from 'react';
 
 function App() {
+  const [count,setCount]=useState(0)
+  const displayCount = () => setCount(count+1)
   return (
     <div className="App">
-      <Menu></Menu>
+      <Menu count={count}></Menu>
       <Search></Search>
-      <Products></Products>
+      <Products setCount={displayCount} ></Products>
     </div>
   );
 }
